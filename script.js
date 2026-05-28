@@ -5,31 +5,34 @@ if (contactForm) {
     contactForm.addEventListener('submit', async function (e) {
         e.preventDefault();
 
-        const formData = {
-            name: document.getElementById('name').value.trim(),
-            email: document.getElementById('email').value.trim(),
-            service: document.getElementById('service').value,
-            message: document.getElementById('message').value.trim()
-        };
+        // 1. Package data as standard URL form parameters instead of JSON
+        const formData = new URLSearchParams();
+        formData.append('name', document.getElementById('name').value.trim());
+        formData.append('email', document.getElementById('email').value.trim());
+        formData.append('service', document.getElementById('service').value);
+        formData.append('message', document.getElementById('message').value.trim());
 
         try {
-            // CRITICAL: Ensure this URL ends with /exec, NOT /dev
+            // Make sure this URL ends with /exec
             const response = await fetch(
-                'https://script.google.com/macros/s/AKfycbzIVmco44LSqwFO5LGqbIthPVOxD3JB06xhRUmdvOq6yFdbdQfaAo5AZDwuvFEB7_JU2g/exec', 
+                'https://script.google.com/macros/s/AKfycbxpCHMTb9HvXFY6iwj3fMduZLvDVi_6_0zz8D0cUp09/exec', 
                 {
                     method: 'POST',
-                    mode: 'no-cors', // Helps prevent CORS preflight blockages from Google
+                    body: formData, // Sending URL-encoded text format
                     headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(formData)
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    }
                 }
             );
 
-            // NOTE: Due to Google's redirect behavior with 'no-cors', 
-            // the response body might come back opaque. We optimize for a fallback success behavior.
-            alert('Message submitted!');
-            contactForm.reset();
+            const result = await response.json();
+
+            if (result.success) {
+                alert('Message sent successfully!');
+                contactForm.reset();
+            } else {
+                alert('Something went wrong: ' + result.message);
+            }
 
         } catch (error) {
             console.error(error);
