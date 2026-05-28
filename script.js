@@ -105,12 +105,12 @@ if (contactForm) {
         .then(result => {
             if (result.success) {
                 submitBtn.textContent = 'Message Sent!';
-                submitBtn.style.backgroundColor = '#22c55e';
+                submitBtn.style.opacity = '0.7';
                 this.reset();
                 
                 setTimeout(() => {
                     submitBtn.textContent = originalText;
-                    submitBtn.style.backgroundColor = '';
+                    submitBtn.style.opacity = '1';
                     submitBtn.disabled = false;
                 }, 3000);
             } else {
@@ -120,11 +120,11 @@ if (contactForm) {
         .catch(error => {
             console.error('Error:', error);
             submitBtn.textContent = 'Error - Try Again';
-            submitBtn.style.backgroundColor = '#ef4444';
+            submitBtn.style.opacity = '0.7';
             
             setTimeout(() => {
                 submitBtn.textContent = originalText;
-                submitBtn.style.backgroundColor = '';
+                submitBtn.style.opacity = '1';
                 submitBtn.disabled = false;
             }, 3000);
         });
