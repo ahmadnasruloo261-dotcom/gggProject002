@@ -17,7 +17,7 @@ if (contactForm) {
         try {
 
             const response = await fetch(
-                'https://script.google.com/macros/s/AKfycbwVDB-izNjBECzmJNL3WCfK6DV7PQdUc54KzCNvHd5XHC1EfKBKVEFVNYbQg-qHCpqW/exec',
+                'https://script.google.com/macros/s/AKfycbzcXzAk6OL8CH_DOeEZGDmvFbgnCtTkuNFThiN_4Rz9OVBgp6bcRJvH0yT1u6gsmRHW9g/exec',
                 {
                     method: 'POST',
                     body: JSON.stringify(formData)
