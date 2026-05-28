@@ -15,7 +15,7 @@ if (contactForm) {
         try {
             // CRITICAL: Ensure this URL ends with /exec, NOT /dev
             const response = await fetch(
-                'https://script.google.com/macros/s/AKfycbxpCHMTb9HvXFY6iwj3fMduZLvDVi_6_0zz8D0cUp09/exec', 
+                'https://script.google.com/macros/s/AKfycbzIVmco44LSqwFO5LGqbIthPVOxD3JB06xhRUmdvOq6yFdbdQfaAo5AZDwuvFEB7_JU2g/exec', 
                 {
                     method: 'POST',
                     mode: 'no-cors', // Helps prevent CORS preflight blockages from Google
