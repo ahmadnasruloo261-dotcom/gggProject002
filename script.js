@@ -5,7 +5,7 @@ if (contactForm) {
     contactForm.addEventListener('submit', async function (e) {
         e.preventDefault();
 
-        // Package data as standard URL form parameters
+        // 1. Collect form data and package it as standard URL parameters
         const formData = new URLSearchParams();
         formData.append('name', document.getElementById('name').value.trim());
         formData.append('email', document.getElementById('email').value.trim());
@@ -13,12 +13,13 @@ if (contactForm) {
         formData.append('message', document.getElementById('message').value.trim());
 
         try {
-            // CRITICAL: Ensure this URL ends with /exec, NOT /dev
+            // 2. Send the request to your Google Web App URL
+            // WARNING: Replace the URL below with your fresh /exec URL if you redeployed!
             await fetch(
-                'https://script.google.com/macros/s/AKfycbzIVmco44LSqwFO5LGqbIthPVOxD3JB06xhRUmdvOq6yFdbdQfaAo5AZDwuvFEB7_JU2g/exec', 
+                'https://script.google.com/macros/s/AKfycbxpCHMTb9HvXFY6iwj3fMduZLvDVi_6_0zz8D0cUp09/exec', 
                 {
                     method: 'POST',
-                    mode: 'no-cors', // <-- FIX: Prevents the browser from blocking the submission
+                    mode: 'no-cors', // Bypasses browser security blocks
                     body: formData,
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'
@@ -26,14 +27,13 @@ if (contactForm) {
                 }
             );
 
-            // Note: In 'no-cors' mode, JS cannot read the response body back from Google.
-            // If the fetch didn't throw a network failure, the data sent successfully!
+            // 3. Reset form and alert user upon a clean network transfer
             alert('Message sent successfully!');
             contactForm.reset();
 
         } catch (error) {
             console.error('Submission Error:', error);
-            alert('Error sending message.');
+            alert('Error sending message. Please try again.');
         }
     });
 }
