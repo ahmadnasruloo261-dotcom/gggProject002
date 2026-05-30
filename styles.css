@@ -24,28 +24,6 @@
     --transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* Custom Palette Structural Integration */
-body {
-    background-color: var(--grey-50); /* Instantly updates main background to the warm cream tone */
-    color: var(--grey-600);
-}
-
-/* Give the team cards a premium, editorial floating layout */
-.team-card {
-    border: 1px solid var(--grey-300);
-    padding: 16px;
-    background-color: var(--white);
-    transition: var(--transition);
-    display: block;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.team-card:hover {
-    border-color: var(--ruby-vibrant);
-    transform: translateY(-4px);
-}
-
 /* ===== Reset & Base ===== */
 *, *::before, *::after {
     margin: 0;
@@ -61,8 +39,8 @@ body {
     font-family: var(--font-family);
     font-size: 16px;
     line-height: 1.6;
-    color: var(--grey-800);
-    background-color: var(--grey-50);
+    color: var(--grey-600);
+    background-color: var(--grey-50); /* Instantly updates main background to the warm cream tone */
     -webkit-font-smoothing: antialiased;
 }
 
@@ -126,7 +104,7 @@ h4 {
     font-size: 1.25rem;
     color: var(--grey-600);
     line-height: 1.7;
-} grease
+}
 
 /* ===== Section Styles ===== */
 section {
@@ -557,6 +535,22 @@ section {
     gap: 40px 32px;
 }
 
+/* Give the team cards a premium, editorial floating layout */
+.team-card {
+    border: 1px solid var(--grey-300);
+    padding: 16px;
+    background-color: var(--white);
+    transition: var(--transition);
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.team-card:hover {
+    border-color: var(--ruby-vibrant);
+    transform: translateY(-4px);
+}
+
 .team-image {
     position: relative;
     overflow: hidden;
@@ -785,5 +779,95 @@ section {
 
 .footer-bottom p {
     font-size: 0.75rem;
-    color: var(--grey-400)
+    color: var(--grey-400);
+}
+
+/* ===== Responsive Design Media Queries ===== */
+@media (max-width: 992px) {
+    .services-grid,
+    .portfolio-grid,
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .founders-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .founders-row .team-card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .clients-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 60px 0;
+    }
+
+    .nav-links {
+        display: none; /* Can be hooked with a JS click toggle class to show/hide drawer */
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .hero-scroll {
+        display: none;
+    }
+
+    .about-stats {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .services-grid,
+    .portfolio-grid,
+    .team-grid,
+    .clients-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-item.large {
+        grid-column: span 1;
+    }
+
+    .contact-form {
+        padding: 32px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 32px;
+    }
 }
