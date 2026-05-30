@@ -26,7 +26,6 @@
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#team">Our Team</a></li>
                 <li><a href="#contact">Contact</a></li>
-            
             </ul>
         </div>
     </nav>
@@ -76,6 +75,7 @@
                         <li>Art Valuation</li>
                     </ul>
                 </div>
+                <!-- FIX 2: Added missing closing structural layout tags below -->
                 <div class="service-card">
                     <div class="service-number">03</div>
                     <h3>Art Management</h3>
@@ -86,6 +86,9 @@
                         <li>Exhibition Management</li>
                         <li>Creative Team Coordination</li>
                     </ul>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- About Section -->
@@ -190,177 +193,168 @@
     </section>
 
     <!-- Clients Section -->
-<section class="clients">
-    <div class="container">
-        <div class="section-header center">
-            <span class="section-tag">Trusted By</span>
-            <h2>Our Clients & Partners</h2>
-        </div>
-        <div class="clients-grid">
-            <!-- Client 01: FAGHTA.CO -->
-            <div class="client-logo">
-                <img src="image/logo-faghta.png" alt="FAGHTA.CO">
+    <section class="clients">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">Trusted By</span>
+                <h2>Our Clients & Partners</h2>
             </div>
-            
-            <!-- Client 02:  -->
-            <div class="client-logo">
-                <img src="image/clients/partner2-logo.png" alt="Partner Name 2">
-            </div>
-            
-            <!-- Client 03 -->
-            <div class="client-logo">
-                <img src="image/clients/partner3-logo.png" alt="Partner Name 3">
-            </div>
-            
-            <!-- Client 04 -->
-            <div class="client-logo">
-                <img src="image/clients/partner4-logo.png" alt="Partner Name 4">
-            </div>
-            
-            <!-- Client 05 -->
-            <div class="client-logo">
-                <img src="image/clients/partner5-logo.png" alt="Partner Name 5">
-            </div>
-            
-            <!-- Client 06 -->
-            <div class="client-logo">
-                <img src="image/clients/partner6-logo.png" alt="Partner Name 6">
+            <div class="clients-grid">
+                <div class="client-logo">
+                    <img src="image/logo-faghta.png" alt="FAGHTA.CO">
+                </div>
+                <div class="client-logo">
+                    <img src="image/clients/partner2-logo.png" alt="Partner Name 2">
+                </div>
+                <div class="client-logo">
+                    <img src="image/clients/partner3-logo.png" alt="Partner Name 3">
+                </div>
+                <div class="client-logo">
+                    <img src="image/clients/partner4-logo.png" alt="Partner Name 4">
+                </div>
+                <div class="client-logo">
+                    <img src="image/clients/partner5-logo.png" alt="Partner Name 5">
+                </div>
+                <div class="client-logo">
+                    <img src="image/clients/partner6-logo.png" alt="Partner Name 6">
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="team" class="team">
-    <div class="container">
-        <div class="section-header center">
-            <span class="section-tag">The Creatives</span>
-            <h2>Our Team</h2>
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">The Creatives</span>
+                <h2>Our Team</h2>
+            </div>
+
+            <div class="team-row founders-row">
+                <a href="portfolio-ceo.html" class="team-card premium">
+                    <div class="team-image">
+                        <div class="placeholder-img">
+                            <img src="image/team-ceo.jpg" alt="CEO Name">
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Name of CEO</h3>
+                        <span class="team-role">Co-Founder & CEO</span>
+                    </div>
+                </a>
+                <a href="portfolio-cto.html" class="team-card premium">
+                    <div class="team-image">
+                        <div class="placeholder-img">
+                            <img src="image/team-cto.jpg" alt="CTO Name">
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Name of CTO</h3>
+                        <span class="team-role">Co-Founder & CTO</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="team-grid hod-grid">
+                <!-- FIX 1: Removed 'portfolio/' subdirectory prefix to fix broken pathways -->
+                <a href="portfolio-afif.html" class="team-card">
+                    <div class="team-image">
+                        <div class="placeholder-img">
+                            <img src="image/afif.jpg" alt="Afif Qudanial">
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Afif Qudanial</h3>
+                        <span class="team-role">Chief Operating Officer (COO) & Head of Events</span>
+                    </div>
+                </a>
+
+                <a href="portfolio-arvind.html" class="team-card">
+                    <div class="team-image">
+                        <div class="placeholder-img">
+                            <img src="image/arvind.jpg" alt="Arvind Banisha">
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Arvind Banisha</h3>
+                        <span class="team-role">Head of Production & Director of Photography (DoP)</span>
+                    </div>
+                </a>
+
+                <a href="portfolio-shezieddie.html" class="team-card">
+                    <div class="team-image">
+                        <div class="placeholder-img">
+                            <img src="image/shezieddie.jpg" alt="Shezieddie Shahzarin">
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Shezieddie Shahzarin</h3>
+                        <span class="team-role">Head of Visual and Photographer</span>
+                    </div>
+                </a>
+
+                <a href="portfolio-ameen.html" class="team-card">
+                    <div class="team-image">
+                        <div class="placeholder-img">
+                            <img src="image/ameen.jpg" alt="Ameen Mustaqim">
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Ameen Mustaqim</h3>
+                        <span class="team-role">Head of Stage Direction & Production Management</span>
+                    </div>
+                </a>
+
+                <a href="portfolio-mokhtar.html" class="team-card">
+                    <div class="team-image">
+                        <div class="placeholder-img">
+                            <img src="image/mokthtar.jpeg" alt="Mokhtar Iskandar">
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Mokhtar Iskandar</h3>
+                        <span class="team-role">Head of Performance & Talent Curation</span>
+                    </div>
+                </a>
+
+                <a href="portfolio-hod6.html" class="team-card">
+                    <div class="team-image">
+                        <div class="placeholder-img">
+                            <img src="image/team-hod6.jpg" alt="HOD 6 Name">
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>HOD Name 6</h3>
+                        <span class="team-role">Head of Cinematography</span>
+                    </div>
+                </a>
+
+                <a href="portfolio-hod7.html" class="team-card">
+                    <div class="team-image">
+                        <div class="placeholder-img">
+                            <img src="image/team-hod7.jpg" alt="HOD 7 Name">
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>HOD Name 7</h3>
+                        <span class="team-role">Head of Event Planning</span>
+                    </div>
+                </a>
+
+                <a href="portfolio-hod8.html" class="team-card">
+                    <div class="team-image">
+                        <div class="placeholder-img">
+                            <img src="image/team-hod8.jpg" alt="HOD 8 Name">
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>HOD Name 8</h3>
+                        <span class="team-role">Head of Curation</span>
+                    </div>
+                </a>
+            </div>
         </div>
-
-        <div class="team-row founders-row">
-            <a href="portfolio-ceo.html" class="team-card premium">
-                <div class="team-image">
-                    <div class="placeholder-img">
-                        <img src="image/team-ceo.jpg" alt="CEO Name">
-                    </div>
-                </div>
-                <div class="team-info">
-                    <h3>Name of CEO</h3>
-                    <span class="team-role">Co-Founder & CEO</span>
-                </div>
-            </a>
-            <a href="portfolio-cto.html" class="team-card premium">
-                <div class="team-image">
-                    <div class="placeholder-img">
-                        <img src="image/team-cto.jpg" alt="CTO Name">
-                    </div>
-                </div>
-                <div class="team-info">
-                    <h3>Name of CTO</h3>
-                    <span class="team-role">Co-Founder & CTO</span>
-                </div>
-            </a>
-        </div>
-
-        <div class="team-grid hod-grid">
-            <a href="portfolio/portfolio-afif.html" class="team-card">
-                <div class="team-image">
-                    <div class="placeholder-img">
-                        <img src="image/afif.jpg" alt="Afif Qudanial">
-                    </div>
-                </div>
-                <div class="team-info">
-                    <h3>Afif Qudanial</h3>
-                    <span class="team-role">Chief Operating Officer (COO) & Head of Events</span>
-                </div>
-            </a>
-
-            <a href="portfolio/portfolio-arvind.html" class="team-card">
-                <div class="team-image">
-                    <div class="placeholder-img">
-                        <img src="image/arvind.jpg" alt="Arvind Banisha">
-                    </div>
-                </div>
-                <div class="team-info">
-                    <h3>Arvind Banisha</h3>
-                    <span class="team-role">Head of Production & Director of Photography (DoP)</span>
-                </div>
-            </a>
-
-            <a href="portfolio/portfolio-shezieddie.html" class="team-card">
-                <div class="team-image">
-                    <div class="placeholder-img">
-                        <img src="image/shezieddie.jpg" alt="Shezieddie Shahzarin">
-                    </div>
-                </div>
-                <div class="team-info">
-                    <h3>Shezieddie Shahzarin</h3>
-                    <span class="team-role">Head of Visual and Photographer</span>
-                </div>
-            </a>
-
-            <a href="portfolio/portfolio-ameen.html" class="team-card">
-                <div class="team-image">
-                    <div class="placeholder-img">
-                        <img src="image/ameen.jpg" alt="Ameen Mustaqim">
-                    </div>
-                </div>
-                <div class="team-info">
-                    <h3>Ameen Mustaqim</h3>
-                    <span class="team-role">Head of Stage Direction & Production Management</span>
-                </div>
-            </a>
-
-            <a href="portfolio/portfolio-mokhtar.html" class="team-card">
-                <div class="team-image">
-                    <div class="placeholder-img">
-                        <img src="image/mokthtar.jpeg" alt="Mokhtar Iskandar">
-                    </div>
-                </div>
-                <div class="team-info">
-                    <h3>Mokhtar Iskandar</h3>
-                    <span class="team-role">Head of Performance & Talent Curation</span>
-                </div>
-            </a>
-
-            <a href="portfolio-hod6.html" class="team-card">
-                <div class="team-image">
-                    <div class="placeholder-img">
-                        <img src="image/team-hod6.jpg" alt="HOD 6 Name">
-                    </div>
-                </div>
-                <div class="team-info">
-                    <h3>HOD Name 6</h3>
-                    <span class="team-role">Head of Cinematography</span>
-                </div>
-            </a>
-
-            <a href="portfolio-hod7.html" class="team-card">
-                <div class="team-image">
-                    <div class="placeholder-img">
-                        <img src="image/team-hod7.jpg" alt="HOD 7 Name">
-                    </div>
-                </div>
-                <div class="team-info">
-                    <h3>HOD Name 7</h3>
-                    <span class="team-role">Head of Event Planning</span>
-                </div>
-            </a>
-
-            <a href="portfolio-hod8.html" class="team-card">
-                <div class="team-image">
-                    <div class="placeholder-img">
-                        <img src="image/team-hod8.jpg" alt="HOD 8 Name">
-                    </div>
-                </div>
-                <div class="team-info">
-                    <h3>HOD Name 8</h3>
-                    <span class="team-role">Head of Curation</span>
-                </div>
-            </a>
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
@@ -461,5 +455,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
-\
