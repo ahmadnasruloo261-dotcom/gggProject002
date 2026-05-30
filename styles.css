@@ -1023,34 +1023,39 @@ section {
 /* ===== Team Section ===== */
 .team {
     background-color: var(--white);
+    padding: 120px 0;
 }
 
+/* Founders Layout Framework */
 .founders-row {
     display: flex;
     justify-content: center;
-    gap: 40px;
-    margin-bottom: 60px;
+    gap: 48px;
+    margin-bottom: 80px;
 }
 
-.founders-row .team-card {
-    width: calc(33.333% - 20px); /* Makes founders slightly larger and distinct */
+.founders-row .team-card.premium {
+    width: calc(35% - 24px);
 }
 
+/* HOD 4-Column Grid Frame */
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columns for HODs on desktop */
-    gap: 32px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 32px;
 }
 
 .team-card {
     display: block;
     cursor: pointer;
+    text-decoration: none;
 }
 
+/* Professional Editorial Portrait Ratio (3:4) */
 .team-image {
     position: relative;
     overflow: hidden;
-    aspect-ratio: 1/1; /* Square profiles keep the look neat and unified */
+    aspect-ratio: 3 / 4; 
     background-color: var(--grey-100);
 }
 
@@ -1058,23 +1063,34 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: var(--transition);
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* Subtle hover treatment matching your portfolio layout */
+.placeholder-img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Modern Creative Animations on Hover */
 .team-card:hover .team-image img {
-    transform: scale(1.04);
+    transform: scale(1.05);
 }
 
 .team-info {
-    padding: 16px 0;
+    padding: 20px 0 0 0;
+    transition: transform 0.4s ease;
+}
+
+.team-card:hover .team-info {
+    transform: translateY(-2px);
 }
 
 .team-info h3 {
     font-size: 1.125rem;
     font-weight: 500;
     color: var(--grey-900);
-    transition: var(--transition);
+    margin: 0;
+    transition: color 0.3s ease;
 }
 
 .team-card:hover .team-info h3 {
@@ -1083,11 +1099,49 @@ section {
 
 .team-role {
     display: block;
-    font-size: 0.8125rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--grey-500);
-    margin-top: 4px;
+    letter-spacing: 0.08em;
+    color: var(--grey-400);
+    margin-top: 6px;
+    font-weight: 500;
+}
+
+/* Tablet Layout Optimization */
+@media (max-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 24px;
+    }
+    
+    .founders-row .team-card.premium {
+        width: calc(50% - 24px);
+    }
+}
+
+/* Phone Layout Optimization */
+@media (max-width: 768px) {
+    .founders-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    
+    .founders-row .team-card.premium {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+    
+    .team-card {
+        max-width: 400px;
+        margin: 0 auto;
+        width: 100%;
+    }
 }
 
 /* ===== Contact Section ===== */
