@@ -1,1044 +1,538 @@
-
-
-/* ===== CSS Variables (Bold Ruby Brutalist Theme) ===== */
+/* ===== CSS Variables (Avant-Garde Ruby & Olive Theme) ===== */
 :root {
-    /* Main Bold Accents */
-    --ruby-vibrant: #E61E43;   /* The stark, high-saturation bright red from your reference */
-    --ruby-deep: #9B0F26;      /* Rich crimson accent for structural depth */
-    --leaf-stark: #2A3B22;     /* Dark contrasting forest olive for sharp secondary elements */
+    /* Main Creative Accents */
+    --ruby-vibrant: #B31942;   /* The sharp, sophisticated editorial red from your palette */
+    --ruby-deep: #6B0F24;      /* Deep burgundy for hover accents and active typography elements */
+    --olive-deep: #2A3628;     /* Rich structural pine/olive green used for key accents */
 
-    /* High-Contrast Panels & Fills (Replaces your old grays with the reference's bold tones) */
+    /* Premium Palette Mapping */
     --white: #FFFFFF;
-    --grey-50: #F9F6F6;        /* Clean crisp light canvas tint */
-    --grey-100: #F3EBEF;       /* Visible block fill tint */
-    --grey-200: #171717;       /* CHANGED TO DARK: For sharp, bold structural border lines */
-    --grey-300: #262626;       /* Mid-tone structural line dividers */
-    --grey-400: #737373;       /* Balanced secondary gray */
-    --grey-500: #E61E43;       /* REDIRECTED TO RED: Small tags/subtitles will now pop out in bright red! */
-    --grey-600: #262626;       /* High-contrast charcoal text for readability */
-    --grey-700: #171717;       /* Dark slate accents */
-    --grey-800: #0A0A0A;       /* Deep stark black for bold descriptions */
-    --grey-900: #E61E43;       /* REDIRECTED TO RED: Main Section headers now strike out in bold ruby red! */
-    --black: #000000;          /* Absolute pure black */
+    --grey-50: #FBF9F4;        /* THE BACKDROP: Gorgeous warm cream canvas tint from your reference */
+    --grey-100: #F3EFE6;       /* Slightly deeper cream shade for section blocks or panels */
+    --grey-200: #2A3628;       /* REDIRECTED TO OLIVE: Borders are now a clean, thin dark pine line */
+    --grey-300: #D5CEBF;       /* Warm linen divider lines */
+    --grey-400: #8C826E;       /* Muted earth tone for secondary info */
+    --grey-500: #B31942;       /* REDIRECTED TO RUBY: Small tags and subtitles pop out in editorial red */
+    --grey-600: #2B2A27;       /* Soft charcoal-espresso body text for high readability over cream */
+    --grey-700: #1C241B;       /* Secondary dark olive */
+    --grey-800: #121711;       /* Deepest olive-black for rich descriptions */
+    --grey-900: #B31942;       /* REDIRECTED TO RUBY: Section titles display in striking crimson red */
+    --black: #0B0F0A;          /* Absolute rich near-black with olive base notes */
     
     /* Layout Variables */
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    --transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+    --transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-   
-
-    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
+/* Custom Palette Structural Integration */
+body {
+    background-color: var(--grey-50); /* Instantly updates main background to the warm cream tone */
+    color: var(--grey-600);
 }
-/* Brutalist Border Tweaks matching your reference */
+
+/* Give the team cards a premium, editorial floating layout */
 .team-card {
-    border: 1px solid var(--grey-200); /* Adds a clean, thin dark frame around cards */
-    padding: 12px;
+    border: 1px solid var(--grey-300);
+    padding: 16px;
     background-color: var(--white);
     transition: var(--transition);
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .team-card:hover {
-    border-color: var(--ruby-vibrant); /* Frame flashes bright red on hover! */
+    border-color: var(--ruby-vibrant);
     transform: translateY(-4px);
 }
 
-.btn-primary {
-    background-color: var(--ruby-vibrant) !important; /* Forces buttons to take on the loud red signature */
-    color: var(--white) !important;
-    font-weight: 600;
-}
-
-.btn-primary:hover {
-    background-color: var(--black) !important;
-}
-
-
 /* ===== Reset & Base ===== */
-
 *, *::before, *::after {
-
     margin: 0;
-
     padding: 0;
-
     box-sizing: border-box;
-
 }
-
-
 
 html {
-
     scroll-behavior: smooth;
-
 }
-
-
 
 body {
-
     font-family: var(--font-family);
-
     font-size: 16px;
-
     line-height: 1.6;
-
     color: var(--grey-800);
-
-    background-color: var(--white);
-
+    background-color: var(--grey-50);
     -webkit-font-smoothing: antialiased;
-
 }
-
-
 
 a {
-
     text-decoration: none;
-
     color: inherit;
-
     transition: var(--transition);
-
 }
-
-
 
 ul {
-
     list-style: none;
-
 }
-
-
 
 img {
-
     max-width: 100%;
-
     height: auto;
-
     display: block;
-
 }
-
-
 
 /* ===== Container ===== */
-
 .container {
-
     width: 100%;
-
     max-width: 1200px;
-
     margin: 0 auto;
-
     padding: 0 24px;
-
 }
-
-
 
 /* ===== Typography ===== */
-
 h1, h2, h3, h4, h5, h6 {
-
     font-weight: 500;
-
     line-height: 1.2;
-
     color: var(--grey-900);
-
 }
-
-
 
 h1 {
-
     font-size: clamp(2.5rem, 5vw, 4rem);
-
     font-weight: 300;
-
     letter-spacing: -0.02em;
-
 }
-
-
 
 h2 {
-
     font-size: clamp(2rem, 4vw, 3rem);
-
     font-weight: 400;
-
     letter-spacing: -0.01em;
-
 }
-
-
 
 h3 {
-
     font-size: 1.5rem;
-
     font-weight: 500;
-
 }
-
-
 
 h4 {
-
     font-size: 1rem;
-
     font-weight: 600;
-
     text-transform: uppercase;
-
     letter-spacing: 0.05em;
-
     color: var(--grey-500);
-
 }
-
-
 
 .lead {
-
     font-size: 1.25rem;
-
     color: var(--grey-600);
-
     line-height: 1.7;
-
-}
-
-
+} grease
 
 /* ===== Section Styles ===== */
-
 section {
-
     padding: 100px 0;
-
 }
-
-
 
 .section-header {
-
     margin-bottom: 60px;
-
 }
-
-
 
 .section-header.center {
-
     text-align: center;
-
 }
-
-
 
 .section-tag {
-
     display: inline-block;
-
     font-size: 0.75rem;
-
     font-weight: 600;
-
     text-transform: uppercase;
-
     letter-spacing: 0.1em;
-
     color: var(--grey-500);
-
     margin-bottom: 16px;
-
 }
-
-
 
 /* ===== Buttons ===== */
-
 .btn {
-
     display: inline-flex;
-
     align-items: center;
-
     justify-content: center;
-
     padding: 16px 32px;
-
     font-size: 0.875rem;
-
     font-weight: 500;
-
-    letter-spacing: 0.025em;
-
+    letter-spacing: 0.05em;
     border: none;
-
     border-radius: 0;
-
     cursor: pointer;
-
     transition: var(--transition);
-
+    text-transform: uppercase;
 }
-
-
 
 .btn-primary {
-
-    background-color: var(--grey-900);
-
-    color: var(--white);
-
+    background-color: var(--ruby-vibrant) !important;
+    color: var(--white) !important;
 }
-
-
 
 .btn-primary:hover {
-
-    background-color: var(--grey-700);
-
+    background-color: var(--olive-deep) !important;
 }
-
-
 
 .btn-full {
-
     width: 100%;
-
 }
-
-
 
 /* ===== Navigation ===== */
-
 .navbar {
-
     position: fixed;
-
     top: 0;
-
     left: 0;
-
     right: 0;
-
     z-index: 1000;
-
-    background-color: rgba(255, 255, 255, 0.95);
-
+    background-color: rgba(251, 249, 244, 0.95); /* Cream base alpha */
     backdrop-filter: blur(10px);
-
-    border-bottom: 1px solid var(--grey-200);
-
+    border-bottom: 1px solid var(--grey-300);
 }
-
-
 
 .navbar .container {
-
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
-
     height: 80px;
-
 }
-
-
 
 .logo {
-
     font-size: 1.125rem;
-
     font-weight: 600;
-
     letter-spacing: -0.01em;
-
     color: var(--grey-900);
-
 }
-
-
 
 .nav-links {
-
     display: flex;
-
     gap: 40px;
-
 }
-
-
 
 .nav-links a {
-
     font-size: 0.875rem;
-
     font-weight: 400;
-
     color: var(--grey-600);
-
     position: relative;
-
 }
-
-
 
 .nav-links a::after {
-
     content: '';
-
     position: absolute;
-
     bottom: -4px;
-
     left: 0;
-
     width: 0;
-
     height: 1px;
-
-    background-color: var(--grey-900);
-
+    background-color: var(--ruby-vibrant);
     transition: var(--transition);
-
 }
-
-
 
 .nav-links a:hover {
-
-    color: var(--grey-900);
-
+    color: var(--ruby-vibrant);
 }
-
-
 
 .nav-links a:hover::after {
-
     width: 100%;
-
 }
-
-
 
 .nav-toggle {
-
     display: none;
-
     flex-direction: column;
-
     gap: 5px;
-
     background: none;
-
     border: none;
-
     cursor: pointer;
-
     padding: 10px;
-
 }
-
-
 
 .nav-toggle span {
-
     width: 24px;
-
     height: 2px;
-
     background-color: var(--grey-900);
-
     transition: var(--transition);
-
 }
-
-
 
 /* ===== Hero Section ===== */
-
 .hero {
-
     min-height: 100vh;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     position: relative;
-
     background-color: var(--grey-50);
-
     padding-top: 80px;
-
 }
-
-
 
 .hero-content {
-
     text-align: center;
-
     max-width: 800px;
-
 }
-
-
 
 .hero-subtitle {
-
     font-size: 1rem;
-
-    color: var(--grey-500);
-
+    color: var(--grey-400);
     margin: 24px 0 40px;
-
     letter-spacing: 0.1em;
-
 }
-
-
 
 .hero-scroll {
-
     position: absolute;
-
     bottom: 40px;
-
     left: 50%;
-
     transform: translateX(-50%);
-
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
-
     gap: 12px;
-
 }
-
-
 
 .hero-scroll span {
-
     font-size: 0.75rem;
-
     text-transform: uppercase;
-
     letter-spacing: 0.1em;
-
     color: var(--grey-400);
-
 }
-
-
 
 .scroll-line {
-
     width: 1px;
-
     height: 60px;
-
     background: linear-gradient(to bottom, var(--grey-400), transparent);
-
     animation: scrollPulse 2s ease-in-out infinite;
-
 }
-
-
 
 @keyframes scrollPulse {
-
     0%, 100% { opacity: 1; }
-
     50% { opacity: 0.3; }
-
 }
-
-
 
 /* ===== Services Section ===== */
-
 .services {
-
     background-color: var(--white);
-
 }
-
-
 
 .services-grid {
-
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 40px;
-
 }
-
-
 
 .service-card {
-
     padding: 40px;
-
     background-color: var(--grey-50);
-
+    border: 1px solid var(--grey-300);
     transition: var(--transition);
-
 }
-
-
 
 .service-card:hover {
-
     background-color: var(--grey-100);
-
+    border-color: var(--ruby-vibrant);
 }
-
-
 
 .service-number {
-
     font-size: 0.75rem;
-
     font-weight: 600;
-
     color: var(--grey-400);
-
     margin-bottom: 24px;
-
 }
-
-
 
 .service-card h3 {
-
     margin-bottom: 16px;
-
 }
-
-
 
 .service-card p {
-
     color: var(--grey-600);
-
     margin-bottom: 24px;
-
     font-size: 0.9375rem;
-
 }
-
-
 
 .service-list {
-
-    border-top: 1px solid var(--grey-200);
-
+    border-top: 1px solid var(--grey-300);
     padding-top: 24px;
-
 }
-
-
 
 .service-list li {
-
     font-size: 0.875rem;
-
-    color: var(--grey-500);
-
+    color: var(--grey-400);
     padding: 8px 0;
-
-    border-bottom: 1px solid var(--grey-200);
-
+    border-bottom: 1px solid var(--grey-300);
 }
-
-
 
 .service-list li:last-child {
-
     border-bottom: none;
-
 }
-
-
 
 /* ===== About Section ===== */
-
 .about {
-
-    background-color: var(--grey-900);
-
+    background-color: var(--olive-deep) !important; /* Premium deep pine green backdrop */
     color: var(--white);
-
 }
-
-
 
 .about h2, .about h3, .about h4 {
-
     color: var(--white);
-
 }
-
-
 
 .about .section-tag {
-
-    color: var(--grey-400);
-
+    color: var(--grey-300);
 }
-
-
 
 .about-grid {
-
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
     gap: 80px;
-
     align-items: center;
-
 }
-
-
 
 .about-content p {
-
-    color: var(--grey-400);
-
+    color: var(--grey-100);
     margin-bottom: 20px;
-
 }
-
-
 
 .about-content .lead {
-
-    color: var(--grey-300);
-
+    color: var(--grey-50);
 }
-
-
 
 .about-stats {
-
     display: flex;
-
     gap: 40px;
-
     margin-top: 40px;
-
     padding-top: 40px;
-
-    border-top: 1px solid var(--grey-700);
-
+    border-top: 1px solid var(--grey-400);
 }
-
-
 
 .stat-number {
-
     display: block;
-
     font-size: 2.5rem;
-
     font-weight: 300;
-
     color: var(--white);
-
 }
-
-
 
 .stat-label {
-
     font-size: 0.75rem;
-
     text-transform: uppercase;
-
     letter-spacing: 0.1em;
-
-    color: var(--grey-500);
-
+    color: var(--grey-300);
 }
-
-
 
 .about-image {
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
 }
-
-
 
 .image-placeholder {
-
     width: 100%;
-
     aspect-ratio: 4/5;
-
     background-color: transparent;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     overflow: hidden;
-
     border-radius: 24px;
-
 }
-
-
 
 .image-placeholder img {
-
     width: 100%;
-
     height: auto;
-
     object-fit: contain;
-
     display: block;
-
 }
-
-
-
-.image-placeholder span {
-
-    font-size: 3rem;
-
-    font-weight: 300;
-
-    color: var(--grey-600);
-
-    letter-spacing: 0.2em;
-
-}
-
-
 
 /* ===== Portfolio Section ===== */
-
 .portfolio {
-
     background-color: var(--grey-50);
-
 }
-
-
 
 .portfolio-grid {
-
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 24px;
-
 }
-
-
 
 .portfolio-item {
-
     position: relative;
-
     overflow: hidden;
-
     cursor: pointer;
-
 }
-
-
 
 .portfolio-item.large {
-
     grid-column: span 2;
-
 }
-
-
 
 .portfolio-image {
-
     position: relative;
-
     overflow: hidden;
-
-    /* This gives your standard images a clean 16:10 rectangle shape */
-
     aspect-ratio: 16/10;
-
+    border: 1px solid var(--grey-300);
 }
-
-
 
 .portfolio-item.large .portfolio-image {
-
-    /* This gives your large highlights a wide cinematic 16:9 aspect ratio */
-
     aspect-ratio: 16/9;
-
 }
-
-
-
-/* This targets your new actual images and forces them to scale correctly */
 
 .portfolio-image img {
-
     width: 100%;
-
     height: 100%;
-
-    object-fit: cover; /* Keeps images crisp without stretching or distorting */
-
+    object-fit: cover;
     transition: var(--transition);
-
 }
-
-
-
-/* Simple hover effect: subtle zoom on the picture */
 
 .portfolio-item:hover .portfolio-image img {
-
     transform: scale(1.03);
-
 }
-
-
 
 .portfolio-info {
-
     padding: 20px 0;
-
 }
-
-
 
 .portfolio-category {
-
     font-size: 0.75rem;
-
     text-transform: uppercase;
-
     letter-spacing: 0.1em;
-
-    color: var(--grey-500);
-
+    color: var(--grey-400);
 }
-
-
 
 .portfolio-info h3 {
-
     font-size: 1.125rem;
-
     font-weight: 500;
-
     margin-top: 8px;
-
+    color: var(--grey-800);
 }
-
-
 
 /* ===== Clients Section ===== */
-
 .clients {
-
     background-color: var(--white);
-
     padding: 80px 0;
-
 }
-
-
 
 .clients-grid {
-
     display: grid;
-
     grid-template-columns: repeat(6, 1fr);
-
     gap: 40px;
-
     align-items: center;
-
 }
-
-
 
 .client-logo {
-
     aspect-ratio: 3/2;
-
-    background-color: var(--grey-100);
-
+    background-color: var(--grey-50);
+    border: 1px solid var(--grey-300);
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     transition: var(--transition);
-
 }
-
-
 
 .client-logo:hover {
-
-    background-color: var(--grey-200);
-
+    background-color: var(--grey-100);
+    border-color: var(--ruby-vibrant);
 }
-
-
 
 .client-logo span {
-
     font-size: 0.75rem;
-
     color: var(--grey-400);
-
     font-weight: 500;
-
 }
-
 
 /* ===== Team Section ===== */
 .team {
@@ -1046,7 +540,6 @@ section {
     padding: 120px 0;
 }
 
-/* Founders Layout Framework */
 .founders-row {
     display: flex;
     justify-content: center;
@@ -1054,29 +547,22 @@ section {
     margin-bottom: 80px;
 }
 
-.founders-row .team-card.premium {
+.founders-row .team-card {
     width: calc(35% - 24px);
 }
 
-/* HOD 4-Column Grid Frame */
 .team-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px 32px;
 }
 
-.team-card {
-    display: block;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-/* Professional Editorial Portrait Ratio (3:4) */
 .team-image {
     position: relative;
     overflow: hidden;
     aspect-ratio: 3 / 4; 
     background-color: var(--grey-100);
+    border: 1px solid var(--grey-300);
 }
 
 .team-image img {
@@ -1086,12 +572,6 @@ section {
     transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.placeholder-img {
-    width: 100%;
-    height: 100%;
-}
-
-/* Modern Creative Animations on Hover */
 .team-card:hover .team-image img {
     transform: scale(1.05);
 }
@@ -1108,13 +588,13 @@ section {
 .team-info h3 {
     font-size: 1.125rem;
     font-weight: 500;
-    color: var(--grey-900);
+    color: var(--grey-800);
     margin: 0;
     transition: color 0.3s ease;
 }
 
 .team-card:hover .team-info h3 {
-    color: var(--grey-600);
+    color: var(--ruby-vibrant);
 }
 
 .team-role {
@@ -1127,675 +607,182 @@ section {
     font-weight: 500;
 }
 
-/* Tablet Layout Optimization */
-@media (max-width: 1024px) {
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px 24px;
-    }
-    
-    .founders-row .team-card.premium {
-        width: calc(50% - 24px);
-    }
-}
-
-/* Phone Layout Optimization */
-@media (max-width: 768px) {
-    .founders-row {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-    }
-    
-    .founders-row .team-card.premium {
-        width: 100%;
-        max-width: 400px;
-    }
-    
-    .team-grid {
-        grid-template-columns: 1fr;
-        gap: 48px;
-    }
-    
-    .team-card {
-        max-width: 400px;
-        margin: 0 auto;
-        width: 100%;
-    }
-}
-
 /* ===== Contact Section ===== */
-
 .contact {
-
     background-color: var(--grey-50);
-
 }
-
-
 
 .contact-grid {
-
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
     gap: 80px;
-
 }
-
-
 
 .contact-info h2 {
-
     margin-bottom: 20px;
-
 }
-
-
 
 .contact-info > p {
-
     color: var(--grey-600);
-
     margin-bottom: 40px;
-
 }
-
-
 
 .contact-details {
-
     margin-bottom: 40px;
-
 }
-
-
 
 .contact-item {
-
     margin-bottom: 24px;
-
 }
-
-
 
 .contact-label {
-
     display: block;
-
     font-size: 0.75rem;
-
     text-transform: uppercase;
-
     letter-spacing: 0.1em;
-
-    color: var(--grey-500);
-
+    color: var(--grey-400);
     margin-bottom: 8px;
-
 }
-
-
 
 .contact-item a,
-
 .contact-item address {
-
     font-size: 1rem;
-
     font-style: normal;
-
     color: var(--grey-800);
-
 }
-
-
 
 .contact-meta {
-
     margin: 8px 0 0;
-
     font-size: 0.875rem;
-
-    color: var(--grey-600);
-
+    color: var(--grey-400);
 }
-
-
 
 .contact-item a:hover {
-
-    color: var(--grey-600);
-
+    color: var(--ruby-vibrant);
 }
-
-
 
 .social-links {
-
     display: flex;
-
     gap: 16px;
-
 }
-
-
 
 .social-links a {
-
     width: 48px;
-
     height: 48px;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
-    background-color: var(--grey-200);
-
+    background-color: var(--white);
+    border: 1px solid var(--grey-300);
     font-size: 0.75rem;
-
     font-weight: 600;
-
     color: var(--grey-600);
-
 }
-
-
 
 .social-links a:hover {
-
-    background-color: var(--grey-900);
-
+    background-color: var(--ruby-vibrant);
+    border-color: var(--ruby-vibrant);
     color: var(--white);
-
 }
-
-
 
 /* ===== Contact Form ===== */
-
 .contact-form {
-
     background-color: var(--white);
-
+    border: 1px solid var(--grey-300);
     padding: 48px;
-
 }
-
-
 
 .form-group {
-
     margin-bottom: 24px;
-
 }
-
-
 
 .form-group label {
-
     display: block;
-
     font-size: 0.75rem;
-
     text-transform: uppercase;
-
     letter-spacing: 0.1em;
-
-    color: var(--grey-500);
-
+    color: var(--grey-400);
     margin-bottom: 12px;
-
 }
-
-
 
 .form-group input,
-
 .form-group select,
-
 .form-group textarea {
-
     width: 100%;
-
     padding: 16px;
-
     font-family: var(--font-family);
-
     font-size: 1rem;
-
-    border: 1px solid var(--grey-200);
-
+    border: 1px solid var(--grey-300);
     background-color: var(--grey-50);
-
     color: var(--grey-800);
-
     transition: var(--transition);
-
 }
-
-
 
 .form-group input:focus,
-
 .form-group select:focus,
-
 .form-group textarea:focus {
-
     outline: none;
-
-    border-color: var(--grey-400);
-
+    border-color: var(--ruby-vibrant);
     background-color: var(--white);
-
 }
-
-
 
 .form-group textarea {
-
     resize: vertical;
-
     min-height: 120px;
-
 }
-
-
 
 /* ===== Footer ===== */
-
 .footer {
-
-    background-color: var(--grey-900);
-
+    background-color: var(--black);
     color: var(--white);
-
     padding: 80px 0 40px;
-
 }
-
-
 
 .footer-content {
-
     display: flex;
-
     justify-content: space-between;
-
     margin-bottom: 60px;
-
 }
-
-
 
 .footer-brand .logo {
-
     color: var(--white);
-
     margin-bottom: 16px;
-
     display: inline-block;
-
 }
-
-
 
 .footer-brand p {
-
-    color: var(--grey-500);
-
+    color: var(--grey-400);
     font-size: 0.875rem;
-
 }
-
-
 
 .footer-links {
-
     display: flex;
-
     gap: 80px;
-
 }
-
-
 
 .footer-column h4 {
-
-    color: var(--grey-400);
-
+    color: var(--ruby-vibrant);
     margin-bottom: 20px;
-
 }
-
-
 
 .footer-column ul li {
-
     margin-bottom: 12px;
-
 }
-
-
 
 .footer-column a {
-
     font-size: 0.875rem;
-
-    color: var(--grey-400);
-
+    color: var(--grey-300);
 }
-
-
 
 .footer-column a:hover {
-
-    color: var(--white);
-
+    color: var(--ruby-vibrant);
 }
-
-
 
 .footer-bottom {
-
     padding-top: 40px;
-
-    border-top: 1px solid var(--grey-800);
-
+    border-top: 1px solid var(--grey-700);
 }
-
-
 
 .footer-bottom p {
-
     font-size: 0.75rem;
-
-    color: var(--grey-500);
-
-}
-
-
-
-/* ===== Responsive Design ===== */
-
-@media (max-width: 1024px) {
-
-    .services-grid {
-
-        grid-template-columns: 1fr;
-
-    }
-
-   
-
-    .about-grid {
-
-        grid-template-columns: 1fr;
-
-        gap: 60px;
-
-    }
-
-   
-
-    .about-image {
-
-        order: -1;
-
-    }
-
-   
-
-    .portfolio-grid {
-
-        grid-template-columns: repeat(2, 1fr);
-
-    }
-
-   
-
-    .portfolio-item.large {
-
-        grid-column: span 2;
-
-    }
-
-   
-
-    .clients-grid {
-
-        grid-template-columns: repeat(3, 1fr);
-
-    }
-
-   
-
-    .contact-grid {
-
-        grid-template-columns: 1fr;
-
-        gap: 60px;
-
-    }
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr); /* Drops to 2 items per row on tablets */
-}
-    .founders-row .team-card {
-        width: calc(50% - 20px);
-}
-}
-
-
-
-@media (max-width: 768px) {
-
-    section {
-
-        padding: 80px 0;
-
-    }
-
-   
-
-    .nav-links {
-
-        position: fixed;
-
-        top: 80px;
-
-        left: 0;
-
-        right: 0;
-
-        bottom: 0;
-
-        background-color: var(--white);
-
-        flex-direction: column;
-
-        align-items: center;
-
-        justify-content: center;
-
-        gap: 32px;
-
-        opacity: 0;
-
-        visibility: hidden;
-
-        transition: var(--transition);
-
-    }
-
-   
-
-    .nav-links.active {
-
-        opacity: 1;
-
-        visibility: visible;
-
-    }
-
-   
-
-    .nav-links a {
-
-        font-size: 1.5rem;
-
-    }
-
-   
-
-    .nav-toggle {
-
-        display: flex;
-
-    }
-
-   
-
-    .nav-toggle.active span:nth-child(1) {
-
-        transform: rotate(45deg) translate(5px, 5px);
-
-    }
-
-   
-
-    .nav-toggle.active span:nth-child(2) {
-
-        opacity: 0;
-
-    }
-
-   
-
-    .nav-toggle.active span:nth-child(3) {
-
-        transform: rotate(-45deg) translate(5px, -5px);
-
-    }
-
-   
-
-    .hero-scroll {
-
-        display: none;
-
-    }
-
-   
-
-    .about-stats {
-
-        flex-direction: column;
-
-        gap: 24px;
-
-    }
-
-   
-
-    .portfolio-grid {
-
-        grid-template-columns: 1fr;
-
-    }
-
-   
-
-    .portfolio-item.large {
-
-        grid-column: span 1;
-
-    }
-
-   
-
-    .clients-grid {
-
-        grid-template-columns: repeat(2, 1fr);
-
-    }
-
-   
-
-    .contact-form {
-
-        padding: 32px;
-
-    }
-
-   
-
-    .footer-content {
-
-        flex-direction: column;
-
-        gap: 48px;
-
-    }
-
-   
-
-    .footer-links {
-
-        gap: 48px;
-
-    }
-    .founders-row {
-    flex-direction: column;
-        align-items: center;
-        gap: 32px;
-}
-    .founders-row .team-card {
-        width: 100%;
-}
-    .team-grid {
-    grid-template-columns: 1fr; /* Stack into a single neat column on phones */
-    gap: 40px;
-}
-}
-
-
-
-@media (max-width: 480px) {
-
-    .container {
-
-        padding: 0 16px;
-
-    }
-
-   
-
-    .btn {
-
-        padding: 14px 24px;
-
-    }
-
-   
-
-    .service-card {
-
-        padding: 32px 24px;
-
-    }
-
-   
-
-    .clients-grid {
-
-        grid-template-columns: 1fr 1fr;
-
-        gap: 16px;
-
-    }
-
-}
+    color: var(--grey-4
