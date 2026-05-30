@@ -831,7 +831,7 @@ section {
 
 
 
-//* ===== Portfolio Section ===== */
+/* ===== Portfolio Section ===== */
 
 .portfolio {
 
@@ -1020,6 +1020,75 @@ section {
 }
 
 
+/* ===== Team Section ===== */
+.team {
+    background-color: var(--white);
+}
+
+.founders-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.founders-row .team-card {
+    width: calc(33.333% - 20px); /* Makes founders slightly larger and distinct */
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for HODs on desktop */
+    gap: 32px;
+}
+
+.team-card {
+    display: block;
+    cursor: pointer;
+}
+
+.team-image {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1/1; /* Square profiles keep the look neat and unified */
+    background-color: var(--grey-100);
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+/* Subtle hover treatment matching your portfolio layout */
+.team-card:hover .team-image img {
+    transform: scale(1.04);
+}
+
+.team-info {
+    padding: 16px 0;
+}
+
+.team-info h3 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--grey-900);
+    transition: var(--transition);
+}
+
+.team-card:hover .team-info h3 {
+    color: var(--grey-600);
+}
+
+.team-role {
+    display: block;
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--grey-500);
+    margin-top: 4px;
+}
 
 /* ===== Contact Section ===== */
 
